@@ -1,7 +1,7 @@
 # **Problem Statement**
 
 * Imagine this scenario: A grumpy backend engineer working at Reddit mistakenly deleted the "subreddit" column in the database in Australia. None of the subreddit links will populate with posts until the subreddit column data is recovered. While Reddit's team is working on restoring the deleted column, they decide to hire outside consultants to build a classification model that will predict which subreddit a random post belongs to. For consultants bidding for the project, Reddit’s team is asking for a sample model focusing on only two subreddits rather than all of the subreddits hosted on the site.
-* This analysis seeks to create a sample model focusing on Violinist and Cello subreddits to predict which subreddit a random post belongs to.
+* This analysis seeks to build  an accurate classification model to predict which subreddit a given post belongs to.
 * This analysis also aims to list down top features of each subreddit that determine where a random post belongs to.
 
 # **Summary**
@@ -55,7 +55,7 @@ The data was collected by reading from the push shift API on Thursday, June 17, 
 # **Conclusion**
 
 * The Logistic Regression model under the CountVectorizer, can predict whether a given post comes from the Violinist or Cello subreddit with reasonably better accuracy.
-* On test data this model's accuracy rate was 71.4%  and the error rate was 28.5% which was better than the baseline accuracy rate of  50%. 
+* Baseline accuracy rate was 50.7% whereas on test data our model's accuracy rate was 71.4%  which was better than the baseline accuracy and  the error rate of our model was 28.5%.
 * The subreddits shared common words like "cello", "violin", "string", "bow", "music" and many others.
 * Model predictions got a roc_auc_score of  0.808 which shows that our model can detect more numbers of True positives and True negatives than False negatives and False positives.
 * The top ten words that determine whether a post belonged to the Violinist or Cello subreddit according to our model  :
@@ -81,6 +81,8 @@ The data was collected by reading from the push shift API on Thursday, June 17, 
 * Analyze created_utc to check which subreddit people post frequently.
 * Collect more sample data, possibly include comments as well as score.
 * Use sentiment analysis to analyze the post and comments section whether they are constructive or critical.
+* Remove vectorized words that are in the title of the Subreddit.
+
 
 
 
