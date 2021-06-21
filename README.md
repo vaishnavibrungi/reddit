@@ -54,10 +54,10 @@ The data was collected by reading from the push shift API on Thursday, June 17, 
 
 # **Conclusion**
 
-* The Logistic Regression model under the CountVectorizer, can predict whether a given post comes from the Violinist or Cello subreddit with reasonably better accuracy.
+* Logistic Regression model under the CountVectorizer has the better accuracy to predict which subreddit a given post belongs to.
 * Baseline accuracy rate was 50.7% whereas on test data our model's accuracy rate was 71.4%  which was better than the baseline accuracy and  the error rate of our model was 28.5%.
 * The subreddits shared common words like "cello", "violin", "string", "bow", "music" and many others.
-* Model predictions got a roc_auc_score of  0.808 which shows that our model can detect more numbers of True positives and True negatives than False negatives and False positives.
+* Our Model roc_auc_score is 0.808 which shows that our model can detect more numbers of True positives and True negatives than False negatives and False positives and is able to distinguish between positive and negative class.
 * The top ten words that determine whether a post belonged to the Violinist or Cello subreddit according to our model  :
 
 | Violinist 	|      Cello   	|
@@ -80,7 +80,6 @@ The data was collected by reading from the push shift API on Thursday, June 17, 
 * We can include the stemmerized and vectorized text column, the author_flair_text column to see which level of players like a beginner, adult, etc. post frequently in both the subreddits.
 * Analyze created_utc to check which subreddit people post frequently.
 * Collect more sample data, possibly include comments as well as score.
-* Use sentiment analysis to analyze the post and comments section whether they are constructive or critical.
 * Remove vectorized words that are in the title of the Subreddit.
 
 
